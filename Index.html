@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Dinheiro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Meu Dinheiro</h1>
+    <p>Gerencie seu dinheiro com facilidade e de forma eficiente.</p>
+</header>
+
+    <main class="container">
+        <section class="boas-vindas">
+            <h2>Bem-vindo ao Meu Dinheiro | Controle Financeiro</h2>
+            <p>Nosso aplicativo ajuda você a controlar suas finanças pessoais de maneira simples e intuitiva.</p>
+        </section>
+
+        <section class="resumo">
+            <h2>Resumo Financeiro</h2>
+            <p>Visualize rapidamente seu saldo, despesas e receitas em um só lugar.</p>
+
+            <section class="cartoes-container">
+
+                <article class="cartoes">
+                    <h3>Saldo atual</h3>
+                    <p id="saldo-atual">R$ 0,00</p>
+                </article>
+
+                <article class="cartoes">
+                    <h3>Receitas</h3>
+                    <p id="total-receitas">R$ 0,00</p>
+                </article>
+
+                <article class="cartoes">
+                    <h3>Despesas</h3>
+                    <p id="total-despesas">R$ 0,00</p>
+                </article>
+
+        </section>
+        </section>
+
+        <section class="cadastro" aria-labelledby="titulo-cadastro">
+            <h2 id="titulo-cadastro">Nova movimentação</h2>
+
+            <form id="formulario">
+                <section class="campo">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Ex.: Conta de luz" maxlength="100" required>
+                </section>
+
+                <section class="campo">
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" name="valor" min="0.01" step="0.01" placeholder="Ex.: 100.00" required>
+                </section>
+
+                <section class="campo">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecione</option>
+                        <option value="receita">Receita</option>
+                        <option value="despesa">Despesa</option>
+                </select>
+                </section>
+
+                <section class="campo">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione</option>
+                        <option value="alimentacao">Alimentação</option>
+                        <option value="transporte">Transporte</option>
+                        <option value="moradia">Moradia</option>
+                        <option value="lazer">Lazer</option>
+                        <option value="saude">Saúde</option>
+                        <option value="educacao">Educação</option>
+                        <option value="outros">Outros</option>
+                </select>
+                </section>
+
+                <section class="campo">
+                    <label for="data">Data da movimentação:</label>
+                    <input type="date" id="data" name="data" required>
+                </section>
+
+                <button type="submit" id="btn-adicionar">Adicionar movimentação</button>
+                <button type="reset" id="btn-limpar">Limpar formulário</button>
+            </form>
+
+            <p id="mensagem-formulario" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="filtros">
+            <h2>Consultar movimentações</h2>
+
+            <section class="campo">
+                <label for="filtro-tipo">Filtrar por tipo:</label>
+                <select id="filtro-tipo" name="filtro-tipo">
+                    <option value="todos">Todas</option>
+                    <option value="receita">Receitas</option>
+                    <option value="despesa">Despesas</option>
+                </select>
+            </section>
+
+            <section class="campo">
+                <label for="filtro-categoria">Filtrar por categoria:</label>
+                <select id="filtro-categoria" name="filtro-categoria">
+                    <option value="todas">Todas</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="moradia">Moradia</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </section>
+        </section>
+
+        <section class="historico">
+            <h2>Histórico de movimentações</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="lista-movimentacoes">
+                    <tr id="mensagem-vazia">
+                        <td colspan="6">Nenhuma movimentação cadastrada.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+<footer>
+    <p>Meu Dinheiro - Projeto Integrador 2026</p>
+</footer>
+
+</body>
+</html>
