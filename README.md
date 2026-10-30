@@ -39,9 +39,21 @@ Em desenvolvimento.
 
 Novas funcionalidades e melhorias serão adicionadas ao longo do desenvolvimento.
 
-## Autora
+## Autores
 
-Projeto desenvolvido por **Madu**, como parte da jornada de aprendizado em tecnologia e desenvolvimento de sistemas.
+Projeto desenvolvido pela **Turma ADS Noturno**, como parte da jornada de aprendizado em tecnologia e desenvolvimento de sistemas.
+
+### Integrantes
+
+- Alice Ramos Lima
+- Felipe Pennach Meirelees
+- Dayane Ribeiro da Silva
+- Maria Eduarda Sousa da Silva
+- Wilson De Deus Bairos
+
+### Professor Orientador
+
+- Alexandre Lucena
 
 ## Licença
 
